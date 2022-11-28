@@ -1,0 +1,27 @@
+<%- include('components/header')  %> 
+
+        <ul>
+			<% mahasiswa.forEach(m => {%>
+				<div class="mahasiswa-info">
+                <li>nama:<%=m.nama%></li>
+                <li>nim:<%=m.nim%></li>
+                <li>jurusan:<%=m.jurusan%></li>
+			</div>
+            <%}); %> 
+        </ul>
+	<form method="post" action="http://localhost:3000/users">
+		<div>
+			<label for="nama">nama:</label>
+			<input type="text" name="nama" />
+		</div>
+		<div>
+			<label for="nim">nim:</label>
+			<input type="text" name="nim" />
+		</div>
+		<div>
+			<label for="jurusan">jurusan:</label>
+			<input type="text" name="jurusan" />
+		</div>
+		<button type="submit">kirim</button>
+	</form>
+<%- include('components/header')  %> 
